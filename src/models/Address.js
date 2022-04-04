@@ -1,4 +1,5 @@
 const mongoose = require('../config/db')
+const geocoder = require('../utils/geocoder')
 
 const AddressSchema = new mongoose.Schema({
     Street: {
@@ -39,6 +40,17 @@ const AddressSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+})
+
+AddressSchema.pre('save', async function(next){
+    const loc = await geocoder.geocode(`${this.Street}, ${this.Number} - ${this.District}, ${this.City} - ${this.State}, ${this.CEP}`)
+    //console.log(loc) -> ele me deu todas as coordenadas de todos os endereços do que passei para ele
+    this.location = {
+        type: 'Point',
+        coordinates: [loc[0].longitude, loc[0].latitude],
+        formattedAddress: loc[0].formattedAddress
+    }
+    next();
 })
 
 const Address = mongoose.model('Address', AddressSchema);
