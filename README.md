@@ -7,6 +7,17 @@ cálculo de distância Euclidiana e aplicar em todas as combinações de endere�
 - Retorne as distâncias calculadas entre os todos os endereços e indique os endereços
 mais próximos e também os endereços mais distantes. ❌
 
+# Arquivo `config.env`
+
+- Criar um arquivo config.env para poder colocar seus dados.
+Exemplo:
+```js
+PORT=/*Porta do servidor*/
+
+GEOCODER_PROVIDER=mapquest/*Provedor - no meu caso, utilizei o mapquest*/
+GEOCODER_API_KEY=/*Implementar a Key do mapquest (ou de algum outro provedor que esteja utilizando.)*/
+```
+
 # Ferramentas Utilizadas:
 
 - VScode
