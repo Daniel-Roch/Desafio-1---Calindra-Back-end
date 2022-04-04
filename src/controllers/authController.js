@@ -5,8 +5,13 @@ const router = express.Router();
 
 module.exports = (app) =>{
 
-    app.get('/', async (req,res)=>{
-        res.send('<h1>Bem-vindo(a)!</h1>')
+    app.get('/api/V1/AllRegister', async (req,res)=>{
+        try{
+            const allAddress = await Address.find()
+            res.status(200).json(allAddress)
+        }catch(err){
+            res.status(500).json({Error: err, Envio: false})
+        }
     })
 
     app.post('/api/V1/Register', async (req,res)=>{
@@ -19,7 +24,4 @@ module.exports = (app) =>{
         }
     })
 
-    app.get('/Query', async (req,res)=>{
-
-    })
 }

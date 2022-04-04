@@ -25,6 +25,11 @@ mais próximos e também os endereços mais distantes. ❌
 
 - nodemon (auxílio server)
 
+# GET - Para pegar todos os dados
+```http
+  localhost:5000/api/V1/AllRegister
+```
+
 # POST - enviar dados
 ```http
   localhost:5000/api/V1/Register
@@ -59,4 +64,5 @@ corpo exemplo:
 - **C:/local_do_arquivo/OndeIreiFazerOBackup:/data/db** - Local onde está armazenando um backup do banco de dados do docker/mongodb
 
 # Screenshots - Insomnia
+![App Screenshot](/ImageGit/GetAll-Banco-Calindra.PNG)
 ![App Screenshot](/ImageGit/Post-Banco-Calindra.PNG)
