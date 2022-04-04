@@ -19,10 +19,11 @@ mais próximos e também os endereços mais distantes. ❌
 - EXPRESS (criar server)
 - mongoose (auxiliar na conecção e criação com o mongodb)
 - dotenv (configurações globais)
+- node-geocoder (auxilio na parte dos códigos e geolocalização)
 
 # Bibliotecas utilizadas na parte dev:
 
-- NODEMON (auxílio server)
+- nodemon (auxílio server)
 
 # POST - enviar dados
 ```http
