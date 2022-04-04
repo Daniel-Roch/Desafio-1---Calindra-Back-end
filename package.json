@@ -1,0 +1,25 @@
+{
+  "name": "desafiobackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "scripts": {
+    "dev": "nodemon ./src/server.js",
+    "start": "node ./src/server.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Daniel Rocha",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9",
+    "node-geocoder": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
+  }
+}
